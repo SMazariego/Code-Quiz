@@ -1,0 +1,19 @@
+.wrapper {
+    border: 3px solid blue;
+    width: 350px;
+    height: 250px;
+    align-content: center;
+    position: absolute;
+}
+
+.timer { 
+    background-color: blue;
+    align-items: center;
+    padding: 10px 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    color: black;
+
+ }
+
+    
