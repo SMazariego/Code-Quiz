@@ -1,26 +1,32 @@
-
 <!DOCTYPE html>
+<html lang="en">
 
-    <html lang="eng">
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <meta charset="UTF-8">
-            <link rel="stylesheet" href="./assets/style.css">
-            <title>Coding Quiz</title>
-        </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="assets/style.css">
+     <title>Code Quiz</title>
+</head>
 
-        <body>
-           <a href="High Score.html">High Score</a> 
-           <div class="wrapper">
-               <div class="timer"></div>
-               <div class="question bank">
-                   <h1>Coding Quiz</h1>
-                   <p>Please answer the following questions to the best of your abilities, within the allowed time. Time is taken off for every incorrect answer. Choose wisely.</p>
-                   <ul class="Choices"></ul>
-                   <button class="begin"> Begin </button>
-               </div>
-           </div>
+<body>
+    <a href="HighScores.html">View Highscores</a>
+    <div class="header">
+        
+        <div id="currentTime"></div>
+        <div id="questionspool">
+            <h1>Code Quiz</h1>
+            <p>Please answer the following questions to the best of your abilities, within the allowed time. Time is taken off for every incorrect answer. Choose wisely.</p>
+            <ul id="choicesUl"></ul>
+            
+            <button class="begin" id="begin">Begin</button>
+        </div>
 
-           <script src="QuestionPool.js"></script>
-        </body>
-</html> 
+    </div>
+
+
+    <script src="questions.js"></script>
+
+
+</body>
+
+</html>
