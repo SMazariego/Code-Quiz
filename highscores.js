@@ -4,7 +4,7 @@ var returns = document.querySelector("#returns");
 
 
 reset.addEventListener("click", function () {
-    localStorage.reset();
+    localStorage.clear();
     location.reload();
 });
 

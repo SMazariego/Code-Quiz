@@ -191,5 +191,48 @@ function allDone() {
     });
 
 }
+const SCORE_POINTS = 10;
+const MAX_QUESTIONS = 4;
 
+
+// Start Game
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+
+    // Timer
+    var timeInterval = setInterval(function () {
+        if (timeLeft >= 1) {
+            timeEl.textContent = "Time: " + timeLeft;
+            timeLeft--;
+        }
+        else if (timeLeft === 0) {
+            timeEl.textContent = "Time: " + timeLeft;
+            clearInterval(timeInterval);
+            endQuiz();
+        }
+        if (timeLeft === 0) {
+            score = 0
+            localStorage.setItem('allscores', score);
+            window.location.assign('highscores.html');
+        }
+    }, 1000);
+
+        if (score === 10) {
+            score = timeLeft - 40;
+        } else if (score === 20) {
+            score = timeLeft - 30;
+        } else if (score === 30) {
+            score = timeLeft - 20;
+        } else if (score === 40) {
+            score = timeLeft - 10;
+        } else if (score === 50) {
+            score = timeLeft;
+        };
+
+        localStorage.setItem('allscores', score);
+
+        return window.location.assign("highscores.html");
+    };
 
